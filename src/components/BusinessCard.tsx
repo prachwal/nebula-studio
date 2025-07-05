@@ -83,8 +83,23 @@ export function BusinessCard() {
             Tech Stack
           </Text>
           <Grid columns="repeat(auto-fit, minmax(80px, 1fr))" style={{ gap: '0.5rem' }}>
-            {['Preact', 'TypeScript', 'Vite', 'Netlify', 'Node.js'].map(tech => (
-              <Chip key={tech} type="suggestion">
+            {[
+              { tech: 'Preact', color: '#673ab7' },
+              { tech: 'TypeScript', color: '#3178c6' },
+              { tech: 'Vite', color: '#646cff' },
+              { tech: 'Netlify', color: '#00c7b7' },
+              { tech: 'Node.js', color: '#339933' }
+            ].map(({ tech, color }) => (
+              <Chip 
+                key={tech} 
+                type="suggestion"
+                style={{
+                  backgroundColor: `${color}20`,
+                  borderColor: color,
+                  color: color,
+                  fontWeight: '500'
+                }}
+              >
                 {tech}
               </Chip>
             ))}
