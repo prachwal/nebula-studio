@@ -1,5 +1,10 @@
 import { render } from 'preact'
-import './index.css'
+import { AuroraProvider } from 'preact-aurora-ui'
 import { App } from './app.tsx'
 
-render(<App />, document.getElementById('app')!)
+render(
+  <AuroraProvider>
+    <App />
+  </AuroraProvider>,
+  document.getElementById('app')!
+)

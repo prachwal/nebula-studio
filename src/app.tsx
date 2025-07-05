@@ -1,3 +1,5 @@
+import { BusinessCard } from './components/BusinessCard'
+
 export function App() {
-  return <div>Hello</div>
+  return <BusinessCard />
 }
