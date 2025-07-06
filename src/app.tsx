@@ -5,6 +5,7 @@ import { Layout } from './components/Layout'
 import { Home } from './pages/Home'
 import { About } from './pages/About'
 import { Settings } from './pages/Settings'
+import { Status } from './pages/Status'
 
 export function App() {
   // Scroll debugging disabled - issue resolved
@@ -17,6 +18,7 @@ export function App() {
           <Router>
             <Route path="/" component={Home} />
             <Route path="/about" component={About} />
+            <Route path="/status" component={Status} />
             <Route path="/settings" component={Settings} />
           </Router>
         </Layout>

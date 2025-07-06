@@ -38,7 +38,7 @@ export function Layout({ children }: LayoutProps) {
           
           <div />
           
-          <Grid columns="auto auto auto" style={{ gap: '0.5rem' }}>
+          <Grid columns="auto auto auto auto" style={{ gap: '0.5rem' }}>
             <Button 
               variant="text"
               onClick={() => navigate('/')}
@@ -58,6 +58,16 @@ export function Layout({ children }: LayoutProps) {
               }}
             >
               About
+            </Button>
+            <Button 
+              variant="text"
+              onClick={() => navigate('/status')}
+              style={{
+                backgroundColor: isActive('/status') ? 'var(--md-sys-color-primary-container)' : 'transparent',
+                color: isActive('/status') ? 'var(--md-sys-color-on-primary-container)' : 'var(--md-sys-color-on-surface)'
+              }}
+            >
+              Status
             </Button>
             <Button 
               variant="text"
